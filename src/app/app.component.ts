@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tiktaktoe_begin_again';
+  title = 'tiktaktoe_begin_again';  
 }

@@ -1,0 +1,18 @@
+<div class="board">
+    <div class="block">x</div>
+    <div class="block">x</div>
+    <div class="block">x</div>
+    <div class="block">o</div>
+    <div class="block">o</div>
+    <div class="block">o</div>
+    <div class="block">x</div>
+    <div class="block">x</div>
+    <div class="block">x</div>
+</div>
+
+<div class="board">
+    
+    <ng-container *ngFor="let square of squares">
+        <app-square [value]="square"></app-square>    
+    </ng-container>
+</div>

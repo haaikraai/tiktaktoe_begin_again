@@ -1,0 +1,23 @@
+
+
+.board {
+    margin: 20px auto 0 auto;
+    width: 80%;
+    background-color: blueviolet;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 600px;
+    border: 4px solid black;
+}
+
+.block {
+    border: 2px solid darkgray;
+    padding: 10px 10px;
+    width: 180px;
+    height: 180px;
+    font-size: 2rem;
+}
