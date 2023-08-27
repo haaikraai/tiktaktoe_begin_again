@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
 
+export type XO = 'X' | 'O' | null
+
 @Injectable({
   providedIn: 'root'
 })
 export class GameStateService {
 
-  player: XO = 'X'
+  player: XO = 'X';
 
-  boardState: XO[][]  = [[null, null, null],
-                        [null, null, null],
-                        [null, null, null]];
+  boardState: XO[]  = ['O', null, null,
+                      null, 'X', null,
+                      null, 'X', 'X'];
 
 
-  constructor() { }
+  constructor() {}
+
+  makeMove(position: number) {
+    this.boardState[position] = this.player;
+  }
 
   checkWinner() {
     

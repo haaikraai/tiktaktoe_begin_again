@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { GameStateService } from '../game-state.service';
+import { GameStateService, XO } from '../game-state.service';
+import { SquareComponent } from '../square/square.component';
 
 @Component({
   selector: 'app-board',
@@ -8,14 +9,21 @@ import { GameStateService } from '../game-state.service';
 })
 export class BoardComponent {
 
-  get squares(): XO[][] { 
+  
+  get squares(): XO[] { 
     return this.gameState.boardState;
+  }
+  set squares(values: XO[]) {
+    console.log('i was here')
+    this.gameState.boardState = values;
+    this.gameState.checkWinner();
   }
 
   constructor(private gameState: GameStateService) {
   }
 
   ngOnInit() {
-
+    this.squares = this.gameState.boardState;
+    console.log(this.squares)
   }
 }

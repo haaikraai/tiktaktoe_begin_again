@@ -9,10 +9,9 @@
     <div class="block">x</div>
     <div class="block">x</div>
 </div>
-
-<div class="board">
+<hr>
+<div class="board"> 
     
-    <ng-container *ngFor="let square of squares">
-        <app-square [value]="square"></app-square>    
-    </ng-container>
+    <app-square [value]="square" *ngFor="let square of squares" class="block"></app-square>
+        
 </div>

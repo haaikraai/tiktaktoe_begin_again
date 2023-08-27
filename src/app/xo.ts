@@ -1,1 +1,0 @@
-type XO = 'X' | 'O' | null;

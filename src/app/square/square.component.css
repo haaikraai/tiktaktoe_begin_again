@@ -1,0 +1,32 @@
+/* :host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+} */
+
+
+/* For layout */
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+/* For colouring */
+.tile {
+    border: 2px solid black;
+    text-shadow: 4px 2px 9px rgba(255, 255, 255, 0.799);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    /* font-size: 7rem; */
+    background: linear-gradient(33deg, #3e3e3e, #9b7676,#b0b0b0);
+  /* Add any other styles for the tile here */
+}
+
+.tile:hover {
+    background: linear-gradient(33deg, #3e3e3ec2, #9b7676c2,#b0b0b0c2);
+}
