@@ -1,4 +1,4 @@
-<div class="board">
+<!-- <div class="board">
     <div class="block">x</div>
     <div class="block">x</div>
     <div class="block">x</div>
@@ -9,9 +9,10 @@
     <div class="block">x</div>
     <div class="block">x</div>
 </div>
-<hr>
+<hr> -->
 <div class="board"> 
-    
-    <app-square [value]="square" *ngFor="let square of squares" class="block"></app-square>
-        
+    <app-square [value]="square" [position]="i" *ngFor="let square of squares; let i = index" class="block"></app-square>
 </div>
+<h4 style="display: flex; justify-content: center">Player: {{ player }}</h4>
+<hr>
+<span style="display: flex; justify-content: center; font-stretch: extra-expanded;">{{ boardState }}</span>

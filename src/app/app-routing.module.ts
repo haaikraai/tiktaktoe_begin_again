@@ -2,17 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BoardComponent } from './board/board.component';
 import { AppComponent } from './app.component';
-import { SquareComponent } from './square/square.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'board',
+    component: BoardComponent,
     pathMatch: 'full'
   },
   {
     path: 'board',
-    component: BoardComponent,
+    redirectTo: '',
     pathMatch: 'full',
     
   },

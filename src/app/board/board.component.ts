@@ -9,12 +9,14 @@ import { SquareComponent } from '../square/square.component';
 })
 export class BoardComponent {
 
+  public player: XO = 'X';
+  public boardState = this.gameState.boardState;
   
   get squares(): XO[] { 
     return this.gameState.boardState;
   }
   set squares(values: XO[]) {
-    console.log('i was here')
+    console.log('i was here setting the squares in stupid board component even checking the winner???')
     this.gameState.boardState = values;
     this.gameState.checkWinner();
   }
@@ -25,5 +27,6 @@ export class BoardComponent {
   ngOnInit() {
     this.squares = this.gameState.boardState;
     console.log(this.squares)
+    this.player = this.gameState.player;
   }
 }
